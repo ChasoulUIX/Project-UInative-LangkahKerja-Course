@@ -203,7 +203,7 @@
 }
 
 .header-content {
-    background: #00b3b3;
+    background: #FFD130;
     padding: 60px 40px;
     color: white;
 }
@@ -233,7 +233,7 @@
 }
 
 .header-image {
-    background: url('../../images/Right-Content.png');
+    background: url('../../images/Rectangle 5430.png');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -306,61 +306,10 @@
     }
 }
 
-        .categories {
-            margin-top: 180px;
-            padding: 40px 0;
-            margin-bottom: -50px;
-        }
-
-        .categories-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            overflow-x: auto;
-        }
-
-        .category-buttons {
-            display: flex;
-            flex-direction: row;
-            gap: 20px;
-            white-space: nowrap;
-            padding-bottom: 10px;
-        }
-
-        .category-btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 12px 24px;
-            background: #fff;
-            border: 1px solid #e0e0e0;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .category-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .category-btn span {
-            font-size: 14px;
-            font-weight: 500;
-            color: #333;
-        }
-
-        @media (max-width: 768px) {
-            .categories-container {
-                padding: 0 10px;
-            }
-            
-            .category-btn {
-                padding: 8px 16px;
-            }
-        }
-
+      
 .courses {
     padding: 40px 0;
+    margin-top: 200px;
 }
 
 .courses-container {
@@ -712,7 +661,7 @@
             <div class="header-content">
                 <h2>Learn something<br>new everyday.</h2>
                 <p>Become professionals and ready to join the world</p>
-                <a href="../pages/akademik.html" class="explore-btn">Explore the Code</a>
+                <a href="../pages/mycourse.html" class="explore-btn">Explore the Code</a>
             </div>
             <div class="header-image">
                 <div class="profile-info">
@@ -730,19 +679,66 @@
         </div>
     </div>
 
-    <div class="categories">
-        <div class="categories-container">
-            <div class="category-buttons">
-                <button class="category-btn"><span>AI Programming</span></button>
-                <button class="category-btn"><span>Web Development</span></button>
-                <button class="category-btn"><span>Mobile Development</span></button>
-                <button class="category-btn"><span>Backend Development</span></button>
-                <button class="category-btn"><span>Frontend Development</span></button>
-                <button class="category-btn"><span>Fullstack Development</span></button>
-            </div>
+    <div class="filter-container">
+        <div class="filter-wrapper">
+            <select class="filter-select">
+                <option value="">All Rated</option>
+                <option value="highest">Highest Rated</option>
+                <option value="lowest">Lowest Rated</option>
+            </select>
+
+            <select class="filter-select">
+                <option value="">Recently added</option>
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+            </select>
         </div>
     </div>
 
+    <style>
+        .filter-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            margin-top: 250px;
+            margin-bottom: -300px;
+        }
+
+        .filter-wrapper {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .filter-select {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background-color: white;
+            font-size: 14px;
+            color: #333;
+            cursor: pointer;
+            min-width: 120px;
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: #7CD2F7;
+        }
+
+        @media (max-width: 768px) {
+            .filter-wrapper {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .filter-select {
+                width: 100%;
+            }
+        }
+    </style>
+
+    
     <div class="courses">
         <div class="courses-container">
             <h2>More from Kitani Studio</h2>
@@ -750,53 +746,142 @@
             
             <div class="course-grid">
                 <div class="course-card">
-                    <img src="../../images/Placeholder 1.png" alt="Vue JS Course">
+                    <img src="../../images/Placeholder 1.png" alt="iOS Development Course">
                     <div class="course-content">
-                        <span class="course-tag">VUE JS SCRATCH COURSE</span>
-                        <h3>Learn Vue JS from Scratch</h3>
-                        <p>Master how to Build Applications using Vue JS Framework</p>
-                        <div class="course-footer">
-                            <span class="price">$24.99</span>
-                            <span class="original-price">$59.99</span>
+                        <h3>iOS 13 SWIFT 5 iOS DEVELOPMEN</h3>
+                        <p>Java Programming Beginner</p>
+                        <small>4/10 Videos Completed</small>
+                        <div class="course-author">
+                            <span>by Kitani Studio</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="course-card">
-                    <img src="../../images/Thumbnail3.png" alt="UI Design Course">
+                    <img src="../../images/Thumbnail3.png" alt="Mobile Development Course">
                     <div class="course-content">
-                        <span class="course-tag">UI DESIGN FOR BEGINNERS</span>
-                        <h3>Learn UI Design Fundamentals</h3>
-                        <p>Learn how to create web applications with professional design</p>
-                        <div class="course-footer">
-                            <span class="price">$24.99</span>
-                            <span class="original-price">$59.99</span>
+                        <h3>MOBILE DEV REACT NATIVE</h3>
+                        <p>Not Yet Started</p>
+                        <div class="course-author">
+                            <span>by Kitani Studio</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="course-card">
-                    <img src="../../images/Thumbnail.png" alt="Mobile Dev Course">
+                    <img src="../../images/Thumbnail.png" alt="Uber Clone Course">
                     <div class="course-content">
-                        <span class="course-tag">MOBILE DEV REACT NATIVE</span>
-                        <h3>React Native Development</h3>
-                        <p>Master how to Build Applications using React Native Framework</p>
-                        <div class="course-footer">
-                            <span class="price">$24.99</span>
-                            <span class="original-price">$59.99</span>
+                        <h3>MAKE UBER CLONE APP</h3>
+                        <p>WordPress Course Intermediate</p>
+                        <small>3/8 Videos Completed</small>
+                        <div class="course-author">
+                            <span>by Kitani Studio</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="course-card">
-                    <img src="../../images/Thumbnail2.png" alt="Website Dev Course">
+                    <img src="../../images/Thumbnail2.png" alt="JavaScript Course">
                     <div class="course-content">
-                        <span class="course-tag">WEBSITE DEV ZERO TO HERO</span>
-                        <h3>Website Development</h3>
-                        <p>Master how to Build Applications using Modern Technologies</p>
-                        <div class="course-footer">
-                            <span class="price">$24.99</span>
-                            <span class="original-price">$59.99</span>
+                        <h3>VUE JAVASCRIPT COURSE</h3>
+                        <p>WordPress Course Intermediate</p>
+                        <small>Not Yet Started</small>
+                        <div class="course-author">
+                            <span>by Kitani Studio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="../../images/Placeholder 1.png" alt="iOS Development Course">
+                    <div class="course-content">
+                        <h3>iOS 13 SWIFT 5 iOS DEVELOPMEN</h3>
+                        <p>Java Programming Beginner</p>
+                        <small>4/10 Videos Completed</small>
+                        <div class="course-author">
+                            <span>by Kitani Studio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="../../images/Thumbnail3.png" alt="Mobile Development Course">
+                    <div class="course-content">
+                        <h3>MOBILE DEV REACT NATIVE</h3>
+                        <p>Not Yet Started</p>
+                        <div class="course-author">
+                            <span>by Kitani Studio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="../../images/Thumbnail.png" alt="Uber Clone Course">
+                    <div class="course-content">
+                        <h3>MAKE UBER CLONE APP</h3>
+                        <p>WordPress Course Intermediate</p>
+                        <small>3/8 Videos Completed</small>
+                        <div class="course-author">
+                            <span>by Kitani Studio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="../../images/Thumbnail2.png" alt="JavaScript Course">
+                    <div class="course-content">
+                        <h3>VUE JAVASCRIPT COURSE</h3>
+                        <p>WordPress Course Intermediate</p>
+                        <small>Not Yet Started</small>
+                        <div class="course-author">
+                            <span>by Kitani Studio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="../../images/Placeholder 1.png" alt="iOS Development Course">
+                    <div class="course-content">
+                        <h3>iOS 13 SWIFT 5 iOS DEVELOPMEN</h3>
+                        <p>Java Programming Beginner</p>
+                        <small>4/10 Videos Completed</small>
+                        <div class="course-author">
+                            <span>by Kitani Studio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="../../images/Thumbnail3.png" alt="Mobile Development Course">
+                    <div class="course-content">
+                        <h3>MOBILE DEV REACT NATIVE</h3>
+                        <p>Not Yet Started</p>
+                        <div class="course-author">
+                            <span>by Kitani Studio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="../../images/Thumbnail.png" alt="Uber Clone Course">
+                    <div class="course-content">
+                        <h3>MAKE UBER CLONE APP</h3>
+                        <p>WordPress Course Intermediate</p>
+                        <small>3/8 Videos Completed</small>
+                        <div class="course-author">
+                            <span>by Kitani Studio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="../../images/Thumbnail2.png" alt="JavaScript Course">
+                    <div class="course-content">
+                        <h3>VUE JAVASCRIPT COURSE</h3>
+                        <p>WordPress Course Intermediate</p>
+                        <small>Not Yet Started</small>
+                        <div class="course-author">
+                            <span>by Kitani Studio</span>
                         </div>
                     </div>
                 </div>
@@ -804,159 +889,65 @@
         </div>
     </div>
 
-    <div class="courses">
-        <div class="courses-container">
-            <h2>Trending Course</h2>
-            <p>We know that best things for you. See more for You.</p>
-            <div class="course-grid">
-                <div class="course-card">
-                    <img src="../../images/Thumbnail-Image.png" alt="Development Bootcamp">
-                    <div class="course-content">
-                        <span class="course-tag">DEVELOPMENT BOOTCAMP</span>
-                        <h3>Development Bootcamp</h3>
-                        <p>Master how to Build Applications using Modern Technologies</p>
-                        <div class="course-footer">
-                            <span class="price">$24.92</span>
-                            <span class="original-price">$59.99</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <img src="../../images/Thumbnail4.png" alt="Web Development">
-                    <div class="course-content">
-                        <span class="course-tag">WEB DEVELOPMENT</span>
-                        <h3>Web Development</h3>
-                        <p>Master how to Build Applications using Modern Technologies</p>
-                        <div class="course-footer">
-                            <span class="price">$24.92</span>
-                            <span class="original-price">$59.99</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <img src="../../images/Thumbnail5.png" alt="Design Fundamentals">
-                    <div class="course-content">
-                        <span class="course-tag">DESIGN FUNDAMENTALS</span>
-                        <h3>Design Fundamentals</h3>
-                        <p>Learn the fundamentals of design and build amazing projects</p>
-                        <div class="course-footer">
-                            <span class="price">$24.92</span>
-                            <span class="original-price">$59.99</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <img src="../../images/Thumbnail6.png" alt="Mobile Development">
-                    <div class="course-content">
-                        <span class="course-tag">MOBILE DEVELOPMENT</span>
-                        <h3>Mobile Development</h3>
-                        <p>Build mobile applications using modern frameworks</p>
-                        <div class="course-footer">
-                            <span class="price">$24.92</span>
-                            <span class="original-price">$59.99</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <img src="../../images/Thumbnail7.png" alt="Development Bootcamp">
-                    <div class="course-content">
-                        <span class="course-tag">DEVELOPMENT BOOTCAMP</span>
-                        <h3>Development Bootcamp</h3>
-                        <p>Master how to Build Applications using Modern Technologies</p>
-                        <div class="course-footer">
-                            <span class="price">$24.92</span>
-                            <span class="original-price">$59.99</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <img src="../../images/Thumbnail8.png" alt="Web Development">
-                    <div class="course-content">
-                        <span class="course-tag">WEB DEVELOPMENT</span>
-                        <h3>Web Development</h3>
-                        <p>Master how to Build Applications using Modern Technologies</p>
-                        <div class="course-footer">
-                            <span class="price">$24.92</span>
-                            <span class="original-price">$59.99</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <img src="../../images/Thumbnail9.png" alt="Design Fundamentals">
-                    <div class="course-content">
-                        <span class="course-tag">DESIGN FUNDAMENTALS</span>
-                        <h3>Design Fundamentals</h3>
-                        <p>Learn the fundamentals of design and build amazing projects</p>
-                        <div class="course-footer">
-                            <span class="price">$24.92</span>
-                            <span class="original-price">$59.99</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <img src="../../images/Thumbnail10.png" alt="Mobile Development">
-                    <div class="course-content">
-                        <span class="course-tag">MOBILE DEVELOPMENT</span>
-                        <h3>Mobile Development</h3>
-                        <p>Build mobile applications using modern frameworks</p>
-                        <div class="course-footer">
-                            <span class="price">$24.92</span>
-                            <span class="original-price">$59.99</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="pagination">
+        <a href="#" class="page-link">&laquo;</a>
+        <a href="#" class="page-link active">1</a>
+        <a href="#" class="page-link">2</a>
+        <a href="#" class="page-link">3</a>
+        <a href="#" class="page-link">4</a>
+        <a href="#" class="page-link">5</a>
+        <span class="page-dots">...</span>
+        <a href="#" class="page-link">98</a>
+        <a href="#" class="page-link">&raquo;</a>
     </div>
+
+    <style>
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin: 40px 0;
+        }
+
+        .page-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .page-link:hover {
+            background-color: #f5f5f5;
+        }
+
+        .page-link.active {
+            background-color: #FFD130;
+            color: white;
+            border-color: #FFD130;
+        }
+
+        .page-dots {
+            color: #666;
+        }
+
+        @media (max-width: 576px) {
+            .page-link {
+                width: 32px;
+                height: 32px;
+                font-size: 14px;
+            }
+        }
+    </style>
+   
     
-    <div class="popular-instructors">
-        <div class="instructors-container">
-            <h2>Popular Instructor</h2>
-            <p>We share the best things for You. The path for You.</p>
-            
-            <div class="instructor-grid">
-                <div class="instructor-card">
-                    <img src="../../images/Square1.png" alt="Instructor">
-                    <div class="instructor-info">
-                        <h3>Alexander Bastion</h3>
-                        <p>Senior Python Dev</p>
-                    </div>
-                </div>
-
-                <div class="instructor-card">
-                    <img src="../../images/Square3.png" alt="Instructor">
-                    <div class="instructor-info">
-                        <h3>Labie Cartholine</h3>
-                        <p>UI Designer</p>
-                    </div>
-                </div>
-
-                <div class="instructor-card">
-                    <img src="../../images/Square.png" alt="Instructor">
-                    <div class="instructor-info">
-                        <h3>Jonathan Doe</h3>
-                        <p>Fullstack Developer</p>
-                    </div>
-                </div>
-
-                <div class="instructor-card">
-                    <img src="../../images/Square4.png" alt="Instructor">
-                    <div class="instructor-info">
-                        <h3>Kritani Sarasvati</h3>
-                        <p>UX Research</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+   
     <div class="newsletter">
         <div class="newsletter-container">
             <div class="newsletter-content">
